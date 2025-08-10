@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.header {
+  height: 100vh;  /* view height */
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-size: 20px;
+}
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+  align-items: center;
+}
+
+.header__left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.header__title {
+  font-size: 2.2em;
+  margin: 0;
+}
+
+.header__subtitle {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.header__divider {
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 150px;
+}
+
+.header__right {
+  flex: 2;
+  min-width: 250px;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about__image {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.about__image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about__text {
+  flex: 2;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills__item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projects__item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+
+@media (max-width: 768px){
+  .header__container{
+    flex-direction: column;
+    text-align: center;
+  }
+  .header__divider{
+    display: none;
+  }
+  .about{
+    flex-direction: column;
+  }
+  .about__image{
+    align-self: center;
+  }
+}
+
+@media (min-width: 1400px){
+  .header {
+    font-size: 25px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: #f2f2f2;
+  }
+  .skills__item{
+    color: #333;
+  }
+  .projects__item{
+    color: #333;
+  }
+}
